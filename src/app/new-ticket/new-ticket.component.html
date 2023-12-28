@@ -1,0 +1,202 @@
+<div class="container-fluid">
+    <section class="vh-100" >
+        <div class="container-fluid h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-lg-12 col-xl-11 mb-5">
+                    <div class="card text-black" style="border-radius: 25px;">
+                        <div class="card-body p-0">
+                            <div class="row">
+                                <div class="col-12">
+                                    <img src="../assets/image/b1.png" style="width:100%;border-radius: 22px;"class="img-fluid"  alt="Sample image">
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-md-12 col-lg-12 col-xl-12 order-2 order-lg-1"> 
+                                    <p class="text-center h1 fw-bold mb-2  mx-md-4 mt-2">New Ticket</p>
+                                    <div class="mx-1">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="row"> 
+                                                    <div class="col-5">
+                                                        <div class="d-flex flex-row align-items-center mb-4">
+                                                            <i class="fa fa-calendar fa-lg me-3 fa-fw"></i>
+                                                            <div class="   mb-0">
+                                                                <input type="text" id="form3Example1c"
+                                                                    placeholder="Ticket Date" class="form-control" name="ticketDate"  [(ngModel)]="ticketuser.ticketDate" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row"> 
+                                                    <div class="col-4">
+                                                        <div class="d-flex flex-row align-items-center mb-4">
+                                                            <i class="fa fa-user fa-lg me-3 fa-fw"></i>
+                                                            <div class="   mb-0">
+                                                                <input type="text" id="form3Example1c"
+                                                                    placeholder="Enter Name" class="form-control"  name="customerName" [(ngModel)]="ticketuser.customerName" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="d-flex flex-row align-items-center mb-4">
+                                                            <i class="fa fa-phone fa-lg me-3 fa-fw"></i>
+                                                            <div class="   mb-0">
+                                                                <input type="text" id="form3Example1c"
+                                                                    placeholder="Enter Mobile No" class="form-control" name="mobileNo"   [(ngModel)]="ticketuser.mobileNo" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="d-flex flex-row align-items-center mb-4">
+                                                            <i class="fa fa-envelope fa-lg me-3 fa-fw"></i>
+                                                            <div class="   mb-0">
+                                                                <input type="text" id="form3Example1c"
+                                                                    placeholder="Enter Email" class="form-control"name="email"  [(ngModel)]="ticketuser.email" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row"> 
+                                                    <div class="col-4">
+                                                        <div class="d-flex flex-row align-items-center mb-4">
+                                                            <i class="fa fa-user fa-lg me-3 fa-fw"></i>
+                                                            <div class="   mb-0">
+                                                                <input type="text" id="form3Example1c"
+                                                                    placeholder="Enter City" class="form-control"name="city"  [(ngModel)]="ticketuser.city" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="d-flex flex-row align-items-center mb-4">
+                                                            <i class="fa fa-map-marker fa-lg me-3 fa-fw"></i>
+                                                            <div class="   mb-0">
+                                                                <input type="text" id="form3Example1c"
+                                                                    placeholder="Enter State" class="form-control"name="state" [(ngModel)]="ticketuser.state" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="d-flex flex-row align-items-center mb-4">
+                                                            <i class="fa fa-globe fa-lg me-3 fa-fw"></i>
+                                                            <div class="   mb-0">
+                                                                <input type="text" id="form3Example1c"
+                                                                    placeholder="Enter Pin Code" class="form-control"name="pincode" [(ngModel)]="ticketuser.pincode" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="row">
+                                                    <div class="col-5">
+                                                        <div class="d-flex flex-row align-items-center mb-4">
+                                                            <i class="fa fa-plus-circle fa-lg me-3 fa-fw"></i>
+                                                            <div class=" mb-0">
+                                                                 <select class="form-control" (change)="onchangeicon()" [(ngModel)]="ticketuser.reference" >
+                                                                    <option value="">Select Reference</option>
+                                                                    <option value="News Paper">News Paper</option>
+                                                                    <option value="Social Media">Social Media</option>
+                                                                    <option value="Other">Other</option>
+                                                                 </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-5"*ngIf="isOtherSelected" >
+                                                        <div class="d-flex flex-row align-items-center mb-4" >
+                                                            <i class="fa fa-server fa-lg me-3 fa-fw"></i>
+                                                            <div class="   mb-0">
+                                                                <input type="text" id="form3Example1c" 
+                                                                    placeholder="Other Reference" class="form-control"name="reference"  [(ngModel)]="otherRef"  />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+    
+                                                </div>
+                                                <hr>
+                                                <div class="row"> 
+                                                    <div class="col-3">
+                                                        <div class="d-flex flex-row align-items-center mb-4">
+                                                            <i class="fa fa-inr fa-lg me-3 fa-fw"></i>
+                                                            <div class="   mb-0">
+                                                                <input type="text" id="form3Example1c"
+                                                                    placeholder="Adult Rate" class="form-control" name="adultRate"  (change)="calculatrrate()" [(ngModel)]="ticketuser.adultRate"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="d-flex flex-row align-items-center mb-4">
+                                                            <i class="fa fa-inr fa-lg me-3 fa-fw"></i>
+                                                            <div class="   mb-0">
+                                                                <input type="text" id="form3Example1c"
+                                                                    placeholder="Child Rate" class="form-control" name="childRate"  (change)="calculatrrate()"   [(ngModel)]="ticketuser.childRate" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="d-flex flex-row align-items-center mb-4">
+                                                            <i class="fa fa-male fa-lg me-3 fa-fw"></i>
+                                                            <div class="   mb-0">
+                                                                <input type="text" id="form3Example1c"
+                                                                    placeholder="Adults" class="form-control" name="adultCount" (change)="calculatrrate()"  [(ngModel)]="ticketuser.adultCount"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="d-flex flex-row align-items-center mb-4">
+                                                            <i class="fa fa-user fa-lg me-3 fa-fw"></i>
+                                                            <div class="   mb-0">
+                                                                <input type="text" id="form3Example1c"
+                                                                    placeholder="Childrens" class="form-control" (change)="calculatrrate()" name="childCount" [(ngModel)]="ticketuser.childCount" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                                <div class="row"> 
+                                                    <div class="col-4">
+                                                        <div class="d-flex flex-row align-items-center mb-4">
+                                                            <i class="fa fa-inr fa-lg me-3 fa-fw"></i>
+                                                            <div class="   mb-0">
+                                                                <input type="text" readonly id="form3Example1c"
+                                                                    placeholder="Total" class="form-control" name="totalAmount"  [(ngModel)]="ticketuser.totalAmount" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="d-flex flex-row align-items-center mb-4">
+                                                            <i class="fa fa-money fa-lg me-3 fa-fw"></i>
+                                                            <div class="   mb-0">
+                                                                <input type="number" id="form3Example1c"
+                                                                    placeholder="Discount %" class="form-control" name="discountInPercent" (change)="calculatrrate()" [(ngModel)]="ticketuser.discountInPercent" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="d-flex flex-row align-items-center mb-4">
+                                                            <i class="fa fa-inr fa-lg me-3 fa-fw"></i>
+                                                            <div class="   mb-0">
+                                                                <input type="text" readonly id="form3Example1c"
+                                                                    placeholder="After Discount" class="form-control" name="finalAmount" [(ngModel)]="ticketuser.finalAmount"  />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                       
+                                        
+                                        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                                            <button type="button" class="btn btn-primary btn-lg" (click)="getnewtickeruser()">Book
+                                                Ticket</button>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
