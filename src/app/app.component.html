@@ -19,8 +19,8 @@
               </li>
 
           </ul>
-          <form class="d-flex" style="color: white;">
-            Total ({{dashlist.totalTickets}} )  | Todays ({{dashlist.todaysTickets}})
+          <form class="d-flex" style="color: white;" *ngFor="let item of dashlist">
+            Total ({{item.totalTickets}} )  | Todays ({{item.todaysTickets}})
         </form>
       </div>
   </div>

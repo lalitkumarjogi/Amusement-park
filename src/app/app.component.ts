@@ -14,8 +14,7 @@ export class AppComponent implements OnInit {
   constructor(private http:TicketService){}
   getdash(){
      this.http.getdashboard().subscribe((res:any)=>{
-        this.dashlist=res.data[0]
-
+        this.dashlist=res.data
      })
   }
 }
